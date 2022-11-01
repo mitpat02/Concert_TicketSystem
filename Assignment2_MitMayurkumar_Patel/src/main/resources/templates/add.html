@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeLeaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+ <link rel="stylesheet" type="text/css" media="all"
+	th:href="@{/css/design.css}">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ 
+</head>
+<body>
+
+<div class="jumbotron text-center" style="background-color:#fdac53;">
+  <B> 
+  <h1 style="background-color:#efe1ce";>TICKET BOOKING</h1>
+ <EM> <p>TORONTO'S BIGGEST CONCERT</p> </EM>
+ FOR MORE INFORMATION ABOUT US : <A href="https://www.internationalcentre.com/">INTERNATIONAL CENTER</a>
+</B> 
+</div>
+
+<div class="container">
+<section>
+  <h2>TICKET PURCHASE WINDOW</h2>
+  <form th:action="@{/process}" th:object="${tickets}">
+    <div class="form-group">
+      <label for="name">NAME</label>
+      <input type="text" class="form-control" placeholder="Enter Name" th:field="*{name}" >
+    </div>
+    <div class="form-group">
+      <label for="age">AGE</label>
+      <input type="text" class="form-control" placeholder="Enter Age" th:field="*{age}" >
+    </div>
+    <div class="form-group">
+      <label for="zone">ZONE</label>
+      <input type="text" class="form-control" placeholder="Enter Zone" th:field="*{zones}">
+    </div>
+    <div class="form-group">
+      <label for="seat">SEAT</label>
+      <input type="text" class="form-control" placeholder="Enter Seat" th:field="*{seat}">
+    </div>
+    <div class="form-group">
+      <label for="rate">RATE</label>
+      <input type="text" class="form-control" placeholder="Enter Rate" th:field="*{rate}">
+      
+    </div>
+    
+    <input type="submit" value="BUY TICKET">
+    </form>
+    </section>
+</div>    
+    
+
+<BR>
+<footer>
+<a href="/">HOME PAGE</a>
+<a href="/view">SHOW TICKETS</a>
+</footer>
+</body>
+</html>
